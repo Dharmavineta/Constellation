@@ -1,5 +1,5 @@
-import { ClerkProvider } from "@clerk/nextjs";
 import React, { FC } from "react";
+import { Navbar } from "./_components/navbar";
 
 type props = {
   children: React.ReactNode;
@@ -7,9 +7,10 @@ type props = {
 
 const layout: FC<props> = ({ children }) => {
   return (
-    <ClerkProvider>
-      <main>{children}</main>
-    </ClerkProvider>
+    <div className="h-full">
+      <Navbar />
+      {children}
+    </div>
   );
 };
 

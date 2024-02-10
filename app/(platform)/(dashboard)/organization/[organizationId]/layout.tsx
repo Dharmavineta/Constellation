@@ -1,15 +1,15 @@
-import { ClerkProvider } from "@clerk/nextjs";
 import React, { FC } from "react";
-
+import OrgControl from "./_components/OrgControl";
 type props = {
   children: React.ReactNode;
 };
 
 const layout: FC<props> = ({ children }) => {
   return (
-    <ClerkProvider>
-      <main>{children}</main>
-    </ClerkProvider>
+    <div>
+      <OrgControl />
+      {children}
+    </div>
   );
 };
 
